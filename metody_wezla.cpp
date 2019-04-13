@@ -7,14 +7,27 @@ listEl::listEl( int nextValue ) //konstruktor elementu listy
 	nextEl = nullptr;
 }
 
-//stworzyć destruktor listEl
+listEl::~listEl() //destruktor elementu listy
+{
+	if ( nextEl != nullptr ) //jeśli element nie jest ostatni na liście
+		{
+			delete nextEl; //usuń kolejny - przeprowadza rekurencję uruchamiając kolejne destrukory
+			nextEl = nullptr;
+		}
+}
 
 treeEl::treeEl( int value ) //konstruktor wezla drzewa
 {
-	minValue = value;
+	minValue = value; //ponieważ lista zawierać będzie początkowo jedną wartość
 	maxValue = value;
 	numberOfEl = 1;
-	head = new listEl( value );
-	leftSon = nullptr;
+	head = new listEl( value ); //utworzenie listy
+	leftSon = nullptr; // na razie nie ma synów
 	rightSon = nullptr;
+}
+
+treeEl::~treeEl()
+{
+	delete head;
+	head = nullptr;
 }

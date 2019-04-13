@@ -5,6 +5,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Dzialam." << endl;
-	return 0;
+
+	
+	/*treeEl *wsk = new treeEl(1);
+	cout << wsk -> head -> value << endl;
+	delete wsk;*/
 }
