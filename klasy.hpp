@@ -3,6 +3,7 @@ struct listEl
 	struct listEl *nextEl;	//wskaźnik na następny element
 	int value;
 	listEl( int nextValue ); //konstruktor pobierający wartość, którą będzie załadowany element listy
+	~listEl();
 };
 
 class treeEl

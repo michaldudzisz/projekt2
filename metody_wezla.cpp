@@ -21,13 +21,13 @@ treeEl::treeEl( int value ) //konstruktor wezla drzewa
 	minValue = value; //ponieważ lista zawierać będzie początkowo jedną wartość
 	maxValue = value;
 	numberOfEl = 1;
-	head = new listEl( value ); //utworzenie listy
+	head = new listEl( value ); //utworzenie listy za pomocą new
 	leftSon = nullptr; // na razie nie ma synów
 	rightSon = nullptr;
 }
 
 treeEl::~treeEl()
 {
-	delete head;
+	delete head; //rozpoczyna usuwanie listy
 	head = nullptr;
 }

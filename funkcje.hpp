@@ -1,0 +1,2 @@
+char readInterface();
+void clearBuffer();
